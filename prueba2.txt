@@ -1,0 +1,5 @@
+Este es simplemente un archivo de prueba
+
+Aprendo a utilizar vim
+Ya sé escapar :)))
+
