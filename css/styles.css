@@ -1,10 +1,14 @@
 body {
-    color: red;
+    color: black;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 10px;
+    min-height: 100vh;
+    /* Asegura que el cuerpo tenga al menos la altura de la ventana visible */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #cabecera {
@@ -16,11 +20,13 @@ body {
     padding: 0.8em;
 }
 
+
 #container {
+    flex: 1;
+    /* Permite que el contenido ocupe todo el espacio disponible en la columna */
     width: 70%;
     padding: 1cm;
     text-align: center;
-    border: 1px solid #e4e4e4;
     margin: 0 auto;
 }
 
@@ -30,4 +36,20 @@ body {
 
 #post {
     padding: left;
+}
+
+
+#footer {
+    background: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    margin-top: auto;
+    /* Mueve el footer al final de la columna */
+}
+
+#redes-sociales a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
 }
