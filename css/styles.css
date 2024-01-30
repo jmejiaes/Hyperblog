@@ -1,8 +1,11 @@
 body {
-    color: red;
+    color: black;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
     margin: 0;
     padding: 0;
 }
@@ -15,48 +18,8 @@ body {
     margin: 0;
     padding: 0.8em;
     width: 100%;
-    /* Ahora ocupa todo el ancho de la página */
-}
-
-
-#container {
     display: flex;
-    /* Utilizamos Flexbox para la disposición de los elementos */
-    text-align: center;
-    margin: 0 auto;
-}
-
-#post {
-    /* Agrega estilos adicionales según tus necesidades */
-}
-
-
-#menulateral {
-    flex: 1;
-    /* Tercio izquierdo */
-    background: #f2f2f2;
-    padding: 1em;
-    list-style: none;
-    margin: 0;
-}
-
-
-#menulateral a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-#menulateral li {
-    margin-bottom: 10px;
-}
-
-
-#contenido {
-    flex: 2;
-    /* Dos tercios derecho */
-    padding: 1cm;
-    text-align: center;
+    justify-content: space-between;
 }
 
 #menu {
@@ -74,4 +37,57 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+
+#texto-hyperblog {
+    font-size: 1.5em;
+}
+
+#footer {
+    background: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    margin-top: auto;
+}
+
+#redes-sociales a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#container {
+    display: flex;
+    /* Nuevo: utiliza flexbox para dividir la página en dos partes */
+    width: 100%;
+    /* Utiliza todo el ancho disponible */
+    max-width: 1200px;
+    /* Establece un ancho máximo para evitar que se extienda demasiado */
+    margin: 0 auto;
+    /* Centra el contenido */
+    flex: 1;
+    /* Hace que el contenedor ocupe toda la altura disponible */
+}
+
+#menulateral {
+    flex: 0 0 33%;
+    /* 33% del ancho, sin crecer ni encoger */
+    background: #f2f2f2;
+    padding: 1em;
+    list-style: none;
+    margin: 0;
+}
+
+#menulateral a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#contenido {
+    flex: 1;
+    /* Ocupa el espacio restante */
+    padding: 1cm;
+    text-align: center;
 }
